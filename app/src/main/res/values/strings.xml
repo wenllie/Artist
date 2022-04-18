@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FinalProject</string>
+    <array name="genres">
+        <item>Country</item>
+        <item>Pop</item>
+        <item>Rock</item>
+        <item>RNB</item>
+        <item>Jazz</item>
+        <item>Classical</item>
+        <item>Hiphop</item>
+    </array>
+</resources>
