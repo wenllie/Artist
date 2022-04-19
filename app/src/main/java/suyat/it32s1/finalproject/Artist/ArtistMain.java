@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -26,6 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import suyat.it32s1.finalproject.AddTrackActivity.AddTrackActivity;
 import suyat.it32s1.finalproject.R;
 
@@ -39,6 +41,8 @@ public class ArtistMain extends AppCompatActivity {
     EditText editTextName;
     Spinner spinnerGenre;
     Button btnAddArtist;
+    CircleImageView circleImageViewProfile;
+    TextView textViewChangeProfile;
 
     ListView listViewArtists;
 
@@ -59,6 +63,8 @@ public class ArtistMain extends AppCompatActivity {
         editTextName = (EditText) findViewById(R.id.editTextName);
         btnAddArtist = (Button) findViewById(R.id.btnAddArtist);
         spinnerGenre = (Spinner) findViewById(R.id.spinnerGenre);
+        circleImageViewProfile = (CircleImageView) findViewById ( R.id.imageViewArtistProfile );
+        textViewChangeProfile = (TextView) findViewById ( R.id.textViewChangeProfile );
 
         listViewArtists = (ListView) findViewById ( R.id.listViewArtists );
 
