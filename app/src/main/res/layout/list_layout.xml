@@ -10,12 +10,14 @@
         android:id="@+id/textViewName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/concert_one"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/textViewGenre"
         android:layout_width="match_parent"
+        android:fontFamily="@font/concert_one"
         android:layout_height="wrap_content"
         android:text="TextView" />
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -125,7 +125,7 @@ public class ArtistMain extends AppCompatActivity {
 
     private void showUpdateDeleteDialog (String artistId, String artistName) {
 
-        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder ( this );
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder ( ArtistMain.this );
         LayoutInflater inflater = getLayoutInflater ();
         final View dialogView = inflater.inflate ( R.layout.update_dialog, null );
         dialogBuilder.setView ( dialogView );
@@ -185,7 +185,7 @@ public class ArtistMain extends AppCompatActivity {
         //updating artist
         Artist artist = new Artist (id, name, genre);
         databaseReference.setValue ( artist );
-        Toast.makeText ( getApplicationContext (), "Artist updated", Toast.LENGTH_LONG).show ();
+        Toast.makeText ( ArtistMain.this, "Artist updated", Toast.LENGTH_LONG).show ();
         return true;
     }
 
