@@ -13,11 +13,13 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,6 +31,7 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import suyat.it32s1.finalproject.AddTrackActivity.AddTrackActivity;
+import suyat.it32s1.finalproject.MainActivity;
 import suyat.it32s1.finalproject.R;
 
 public class ArtistMain extends AppCompatActivity {
@@ -41,13 +44,14 @@ public class ArtistMain extends AppCompatActivity {
     EditText editTextName;
     Spinner spinnerGenre;
     Button btnAddArtist;
-    CircleImageView circleImageViewProfile;
-    TextView textViewChangeProfile;
+    ImageButton btnLogOut;
 
     ListView listViewArtists;
 
     List<Artist> artists;
     DatabaseReference databaseArtists;
+
+    FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,10 +67,10 @@ public class ArtistMain extends AppCompatActivity {
         editTextName = (EditText) findViewById(R.id.editTextName);
         btnAddArtist = (Button) findViewById(R.id.btnAddArtist);
         spinnerGenre = (Spinner) findViewById(R.id.spinnerGenre);
-        circleImageViewProfile = (CircleImageView) findViewById ( R.id.imageViewArtistProfile );
-        textViewChangeProfile = (TextView) findViewById ( R.id.textViewChangeProfile );
-
+        btnLogOut = (ImageButton) findViewById(R.id.btnLogout);
         listViewArtists = (ListView) findViewById ( R.id.listViewArtists );
+
+        mAuth = FirebaseAuth.getInstance();
 
         //list to store artists
         artists = new ArrayList<> ();
@@ -105,6 +109,15 @@ public class ArtistMain extends AppCompatActivity {
                 Artist artist = artists.get ( i );
                 showUpdateDeleteDialog ( artist.getArtistId (), artist.getArtistName () );
                 return false;
+            }
+        } );
+
+        btnLogOut.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut ();
+                Intent intent = new Intent (ArtistMain.this, MainActivity.class );
+                startActivity ( intent );
             }
         } );
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="suyat.it32s1.finalproject">
+    package="suyat.it32s1.finalproject" >
 
     <application
         android:allowBackup="true"
@@ -9,28 +9,30 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FinalProject">
+        android:theme="@style/Theme.FinalProject" >
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
         <activity
             android:name=".Artist.ArtistMain"
             android:exported="false" />
+        <activity android:name=".MainActivity" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".SplashScreen"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".AddTrackActivity.AddTrackActivity"
-            android:exported="false"
-            />
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
     </application>
 
 </manifest>
