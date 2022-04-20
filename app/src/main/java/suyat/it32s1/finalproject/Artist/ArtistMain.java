@@ -207,7 +207,6 @@ public class ArtistMain extends AppCompatActivity {
 
             //creating an Artist Object
             Artist artist = new Artist(id, name, genre);
-
             //Saving the Artist
             databaseArtists.child(id).setValue(artist);
 
