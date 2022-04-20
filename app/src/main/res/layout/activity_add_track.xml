@@ -57,7 +57,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/concert_one"
             android:text="Rating"
             android:textAlignment="center"
@@ -70,23 +70,23 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:max="5"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="15dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:fontFamily="@font/concert_one"></SeekBar>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnAddTrack"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:background="#000000"
-        android:fontFamily="@font/concert_one"
-        android:text="ADD"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:textColor="#FFFFFF" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAddTrack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="10dp"
+            android:background="#000000"
+            android:fontFamily="@font/concert_one"
+            android:text="ADD"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/textView"
